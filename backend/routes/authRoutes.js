@@ -4,16 +4,6 @@ const { registerUser, loginUser, userLogout } = require("../controllers/authCont
 const protect = require("../middleware/authMiddleware");
 
 router.post("/register", registerUser);
-
-
-
-router.get('/', (req, res, next) => {
-
-    res.json({ message: "mast h..." })
-})
-
-
-
 router.post("/login", loginUser);
 router.get("/logout",protect, userLogout);
 
